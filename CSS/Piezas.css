@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.MenuPrincipal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 0;
+    z-index: 999;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.MenuPrincipal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    z-index: -1;
+}
+
+.user{
+    position: fixed;
+    right: 5%;
+    top: 43px;
+}
+
+.banner {
+    width: 300px;
+    position: fixed;
+    left: 41.5%;
+    top: 40px;
+    z-index: 1000; 
+}
+
+.MenuGeneral {
+    text-align: center;
+}
+
+.MenuGeneral li {
+    display: inline-block;
+    margin:30px 180px;
+    position: relative;
+}
+
+.MenuGeneral li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.MenuGeneral ul.submenu,
+.MenuGeneral ul.submenu2,
+.MenuGeneral ul.submenu3 {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #333;
+    min-width: 160px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.MenuGeneral ul.submenu li,
+.MenuGeneral ul.submenu2 li,
+.MenuGeneral ul.submenu3 li {
+    padding: 0px 0px;
+    display: block;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.MenuGeneral ul.submenu li:hover,
+.MenuGeneral ul.submenu2 li:hover,
+.MenuGeneral ul.submenu3 li:hover {
+    background-color: #555;
+}
+.submenu,
+.submenu2,
+.submenu3 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1300px) {
+    .MenuGeneral li {
+        margin: 30px 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .MenuGeneral li {
+        margin: 15px 50px;
+    }
+}
